@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">  
+
+<tiles-definitions>  
+ 
+   <!-- Base Definition for Admin users-->
+  
+   
+    <definition name="admin-definition" template="/jsppages/template/homepage/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="menu" value="/jsppages/transaction/admin/template/adminMenu.jsp"/> 
+       <put-attribute name="header" value="/jsppages/template/homepage/defaultHeader.jsp"/>  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="bfooter" value="/jsppages/template/homepage/defaultFooter.jsp"/>  
+       
+   </definition>
+
+
+      <definition name="admin.dashbord" extends="admin-definition">  
+       <put-attribute name="title" value="Welcome" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/adminBody.jsp" />  
+   </definition> 
+   
+	<definition name="admin.manageUsersList" extends="admin-definition">  
+       <put-attribute name="title" value="User List" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/userList.jsp" />  
+   </definition> 
+   
+    <definition name="admin.newUserForm" extends="admin-definition">  
+       <put-attribute name="title" value="New User Form" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/newUserForm.jsp" />  
+   </definition> 
+   
+    <definition name="admin.editUserForm" extends="admin-definition">  
+       <put-attribute name="title" value="Edit User Form" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/editUserForm.jsp" />  
+   </definition> 
+   
+   <definition name="admin.addNewProduct" extends="admin-definition">  
+       <put-attribute name="title" value="New New Product Form" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/createNewProduct.jsp" />  
+   </definition>
+   	
+   	
+   <definition name="admin.successTrans" extends="admin-definition">  
+       <put-attribute name="title" value="New New Product Form" />  
+       <put-attribute name="body" value="/jsppages/transaction/successPage.jsp" />  
+   </definition>
+   
+   
+   <definition name="admin.createNewProfile" extends="admin-definition">  
+       <put-attribute name="title" value="New New Product Form" />  
+       <put-attribute name="body" value="/jsppages/transaction/admin/createNewProfile.jsp" />  
+   </definition>
+   
+   
+</tiles-definitions>

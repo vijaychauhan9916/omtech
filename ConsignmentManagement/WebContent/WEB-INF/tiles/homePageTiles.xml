@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">  
+<tiles-definitions>  
+
+ 
+   <!-- Base Definition -->
+   <definition name="base-definition-home" template="/jsppages/template/homepage/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="menu" value="/jsppages/template/homepage/defaultMenu.jsp"/>  
+       <put-attribute name="header" value="/jsppages/template/homepage/defaultHeader.jsp"/>  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="bfooter" value="/jsppages/template/homepage/defaultFooter.jsp"/>  
+       
+   </definition>
+   
+ 
+   <!-- Home Page -->
+   <definition name="home" extends="base-definition-home">  
+       <put-attribute name="title" value="Welcome" />  
+       <put-attribute name="body" value="/jsppages/transaction/home/home.jsp" />  
+   </definition>
+  
+        <!-- Login Page -->
+   <definition name="loginPage" extends="base-definition-home">  
+       <put-attribute name="title" value="Agent/Builder Login Page" />  
+       <put-attribute name="body" value="/jsppages/transaction/home/login.jsp" />  
+   </definition> 
+   
+    <definition name="forgetPasswordUserForm" extends="base-definition-home">  
+       <put-attribute name="title" value="Forget Password" />  
+       <put-attribute name="body" value="/jsppages/transaction/home/forgetPasswordForm.jsp" />  
+   </definition> 
+
+   <definition name="utility.resultpage" template="/jsppages/template/homepage/layouts/printLayout.jsp">  
+       <put-attribute name="title" value="Result Page" />  
+       <put-attribute name="body" value="/resultPage.jsp" />  
+   </definition>
+   
+   
+
+</tiles-definitions>
